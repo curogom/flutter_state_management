@@ -4,8 +4,11 @@ Flutter Festival Songdo StateManagement Example Project
 
 ## Getting Started
 SetState > /main.dart
+
 BLoC > bloc/bloc_main.dart
+
 Provider > provider/provider_main.dart
+
 GetX > getx/getx_main.dart
 
 ## 기타 주저리
