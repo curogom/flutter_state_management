@@ -9,7 +9,13 @@ class CountView extends StatelessWidget {
   Widget build(BuildContext context) {
     final countModel = Provider.of<CountModel>(context);
     return Center(
-      child: Text('${countModel.counter}', style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),),
+      child: Text(
+        '${countModel.counter}',
+        style: const TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }

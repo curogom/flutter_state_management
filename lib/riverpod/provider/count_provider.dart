@@ -1,3 +1,3 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final countProvider = StateProvider((ref) => 0);
+final countProvider = StateProvider<int>((ref) => 0);

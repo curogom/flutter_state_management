@@ -4,8 +4,7 @@ import 'package:state_management/bloc/count_app.dart';
 import 'package:state_management/bloc/count_observer.dart';
 
 void main() {
-  BlocOverrides.runZoned(
-    () => runApp(const CountApp()),
-    blocObserver: CountObserver(),
-  );
+  Bloc.observer = CountObserver();
+
+  runApp(const CountApp());
 }

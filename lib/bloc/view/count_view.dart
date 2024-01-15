@@ -14,7 +14,13 @@ class CountView extends StatelessWidget {
       body: Center(
         child: BlocBuilder<CountCubit, int>(
           builder: (BuildContext context, int state) {
-            return Text('$state', style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold));
+            return Text(
+              '$state',
+              style: const TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
+            );
           },
         ),
       ),

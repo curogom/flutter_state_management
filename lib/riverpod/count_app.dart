@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:state_management/riverpod/provider/count_provider.dart';
 
 class CountApp extends StatelessWidget {
@@ -26,7 +26,13 @@ class CountPage extends ConsumerWidget {
         child: Consumer(
           builder: (context, ref, _) {
             final count = ref.watch(countProvider);
-            return Text('$count');
+            return Text(
+              '$count',
+              style: const TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
+            );
           },
         ),
       ),
@@ -34,12 +40,12 @@ class CountPage extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () => ref.read(countProvider.state).state++,
+            onPressed: () => ref.read(countProvider.notifier).state++,
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 12),
           FloatingActionButton(
-            onPressed: () => ref.read(countProvider.state).state--,
+            onPressed: () => ref.read(countProvider.notifier).state--,
             child: const Icon(Icons.remove),
           ),
         ],
